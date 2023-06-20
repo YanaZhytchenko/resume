@@ -588,7 +588,7 @@ router.get('/web', function (req, res) {
 
     layout: 'basic',
     page: {
-      title: 'Resume | Program',
+      title: 'Resume | Web',
     },
 
 
@@ -717,9 +717,6 @@ router.get('/web', function (req, res) {
 })
 
 // ================================================================
-
-// Підключаємо роутер до бек-енду
-module.exports = router
 
 
 // Підключаємо роутер до бек-енду
