@@ -1,0 +1,84 @@
+<div>
+  <h1>{{name}}</h1>
+  <h2>{{description}}</h2>
+  <p><b>Price: </b> <button type="button" class="btn btn-success">{{price}}</button></p>
+  <p><b>Category: </b> <button type="button" class="btn btn-link">{{category}}</button></p>
+    <hr>
+  {{#with features}}
+    {{#with processor}}
+     <h2>Processor</h2>
+     <p><b>Brand: </b>{{brand}}</p>
+     <p><b>Model: </b>{{model}}</p>
+     <p><b>Speed: </b>{{speed}}</p>
+     <p><b>Cores: </b>{{cores}}</p>      
+     <p><b>Cache: </b>{{cache}}</p>
+    {{/with}}
+    <hr>
+    {{#with memory}}
+     <h2>Memory</h2>
+     <p><b>Type: </b>{{type}}</p>
+     <p><b>Size: </b>{{size}}</p>
+     <p><b>Speed: </b>{{speed}}</p>
+    {{/with}}
+    <hr>
+    {{#with storage}}
+     <h2>Storage</h2>
+     <p><b>Type: </b>{{type}}</p>
+     <p><b>Size: </b>{{size}}</p>
+    {{/with}}
+    <hr>
+     {{#with display}}
+     <h2>Display</h2>
+     <p><b>Size: </b>{{size}}</p>
+     <p><b>Resolution: </b>{{resolution}}</p>
+     <p><b>Technology: </b>{{technology}}</p>
+     <p><b>Color space: </b>{{color_space}}</p>
+     <p><b>Brightness: </b>{{brightness}}</p>
+     <p><b>Refresh_rate: </b>{{refresh_rate}}</p>
+    {{/with}}
+    <hr>
+    {{#with graphics}}
+     <h2>Graphics</h2>
+     <p><b>Brand: </b>{{brand}}</p>
+     <p><b>Model: </b>{{model}}</p>
+     <p><b>Memory: </b>{{memory}}</p>
+    {{/with}}
+    <hr>
+    {{#each ports}}
+     <h2>Ports</h2>
+     <p><b>Type: </b>{{type}}</p>
+     <p><b>Count: </b>{{count}}</p>
+     <p><b>Features: </b>{{features}}</p>
+     <hr>
+    {{/each}}
+    {{#with battery}}
+     <h2>Battery</h2>
+     <p><b>Type: </b>{{type}}</p>
+     <p><b>Capacity: </b>{{capacity}}</p>
+     <p><b>Life: </b>{{life}}</p>
+    {{/with}}
+    <p><b>Weight: </b>{{weight}}</p>
+    <hr>
+     {{#with dimensions}}
+     <h2>Dimensions</h2>
+     <p><b>Height: </b>{{height}}</p>
+     <p><b>Width: </b>{{width}}</p>
+     <p><b>Depth: </b>{{depth}}</p>
+    {{/with}}
+    <p><b>Operating system: </b>{{operating_system}}</p>
+    <hr>
+    {{#each accessories}}
+      <h2>Accessories</h2>
+     <p><b>Name: <button type="button" class="btn btn-link">{{name}}</button></b></p>
+     <p><b>Price: <button type="button" class="btn btn-success">{{price}}</button></b></p>
+     <hr>
+    {{/each}}
+
+
+  {{/with}}  
+      
+
+        
+
+
+</div>
