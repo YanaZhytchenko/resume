@@ -1,0 +1,49 @@
+<div>
+  <h1>{{name}}</h1>
+  {{#each users}}
+    <h2>Users</h2>
+    <p><b>ID: </b> {{id}}</p>
+    <p><b>Name: </b> {{name}}</p>
+    <p><b>Gender: </b> {{gender}}</p>
+    <p><b>Age: </b> {{age}}</p>
+    <hr>
+    {{#each friends}}
+      <h2>Friends</h2>
+      <p><b>ID: </b> {{id}}</p>
+      <p><b>Name: </b> {{name}}</p>
+      <p><b>Gender: </b> {{gender}}</p>
+      <p><b>Age: </b> {{age}}</p>
+      <hr>
+      {{#each mutual_friends}}
+        <h2>Mutual friends</h2>
+        <p><b>ID: </b> {{id}}</p>
+        <p><b>Name: </b> {{name}}</p>
+        <p><b>Gender: </b> {{gender}}</p>
+        <p><b>Age: </b> {{age}}</p>
+        <hr>
+      {{/each}}
+    {{/each}}
+    {{#each groups}}
+      <h2>Groups</h2>
+      <p><b>ID: </b> {{id}}</p>
+      <p><b>Name: </b> {{name}}</p>
+      <p><b>Description: </b> {{description}}</p>
+      <hr>
+      {{#each members}}
+        <h2>Members</h2>
+        <p><b>ID: </b> {{id}}</p>
+        <p><b>Name: </b> {{name}}</p>
+        <p><b>Gender: </b> {{gender}}</p>
+        <p><b>Age: </b> {{age}}</p>
+        <hr>
+      {{/each}}
+    {{/each}}
+
+  {{/each}}      
+       
+
+
+        
+
+
+</div>
