@@ -7,17 +7,17 @@
    <p><b>Year:</b> {{year}}</p>
    <p><b>Founder:</b> {{founder}}</p>
   {{/with}} 
-  <hr>
-  {{#with types}}
-  <h2>Types </h2>
-   <li>Number;</li>
-   <li>String;</li>
-   <li>Boolean;</li>
-   <li>Null;</li>
-   <li>Undefined;</li>
-   <li>Symbol;</li>
-   <li>Object;</li>
-  {{/with}}
+   <hr>
+
+  {{> title data="Types" big=true}}
+    <ul>
+  {{#each types}}
+  <li>
+     {{this}}
+  </li>
+  {{/each}}
+    </ul>
+ 
   <hr>
   {{#with syntax}}
    <h2>Syntax</h2>
@@ -28,40 +28,36 @@
    <p><b>Classes:</b> {{classes}}</p>
   {{/with}}
   <hr>
-  {{#with features}}
-  <h2>Features</h2>
-   <li>First-class functions;</li>
-   <li>Closures;</li>
-   <li>Dynamic typing;</li>
-   <li>Prototype-based inheritance;</li>
-   <li>Asynchronous programming with Promises and async/await;</li>
-   <li>Modules with import/export statements;</li>
-  {{/with}}
+
+  {{> title data="Features" big=true}}
+    <ul>
+  {{#each features}}
+  <li>
+     {{this}}
+  </li>
+  {{/each}}
+    </ul>
+
   <hr>
-  {{#with libraries}}
-  <h2>Libraries </h2>
-   <p><button type="button" class="btn btn-outline-secondary">jQuery</button></p>
-   <p><button type="button" class="btn btn-outline-secondary">React</button></p>
-   <p><button type="button" class="btn btn-outline-secondary">Angular</button></p>
-   <p><button type="button" class="btn btn-outline-secondary">Vue</button></p>
-   <p><button type="button" class="btn btn-outline-secondary">Node.js</button></p>
-   <p><button type="button" class="btn btn-outline-secondary">Express.js</button></p>
-   <p><button type="button" class="btn btn-outline-secondary">Lodash</button></p>
-   <p><button type="button" class="btn btn-outline-secondary">Moment.js</button></p>
-  {{/with}}
+  {{> title data="Libraries" big=true}}
+    <ul>
+  {{#each libraries}}
+  <li>
+     <button type="button" class="btn btn-link">{{this}}</button>
+  </li>
+  {{/each}}
+    </ul>
+
   <hr>
-  {{#with tools}}
-  <h2>Tools </h2>
-   <p><button type="button" class="btn btn-link">Babel</button></p>
-   <p><button type="button" class="btn btn-link">Webpack</button></p>
-   <p><button type="button" class="btn btn-link">ESLint</button></p>
-   <p><button type="button" class="btn btn-link">Jest</button></p>
-   <p><button type="button" class="btn btn-link">Mocha</button></p>
-   <p><button type="button" class="btn btn-link">Chai</button></p>
-   <p><button type="button" class="btn btn-link">Selenium</button></p>
-   <p><button type="button" class="btn btn-link">Cypress</button></p>
-   
-  {{/with}}
+  {{> title data="Tools" big=true}}
+    <ul>
+  {{#each tools}}
+  <li>
+     <button type="button" class="btn btn-link">{{this}}</button>
+  </li>
+  {{/each}}
+  </ul>
+
   <hr>
   {{#each community}}
    <h2>Community</h2>
