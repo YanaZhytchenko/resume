@@ -1,0 +1,87 @@
+<div>
+  <h1>{{name}}</h1>
+        <p>({{birthdate}} - {{deathdate}})</p>
+        <p><b>Birthplace:</b> {{birthplace}}</p>
+        <p><b>Deathplace:</b> {{deathplace}}</p>
+        <p><b>Nationality:</b> {{nationality}}</p>
+        <p><b>Occupation:</b> {{occupation}}</p>
+        <p><b>Known for:</b> {{known_for}}</p>
+        <hr>
+        {{#each education}}
+        <h2>Education</h2>
+
+        <p><b>Degree:</b> {{degree}}</p>
+        <p><b>Field:</b> {{field}}</p>
+        <p><b>Institution:</b> {{institution}} ({{year}})</p>
+        {{/each}}
+        <hr>
+        {{#each notable_publications}}
+        <h2>Notable publications</h2>
+
+        <p><b>Title:</b> {{title}} ({{year}})</p>
+        <p><b>Publisher:</b> {{publisher}}</p>
+        <hr>
+        {{/each}}
+        {{#each partners}}
+        <h2>Partners </h2>
+
+        <p><b>Name:</b> {{name}} </p>
+        <p><b>Relationship:</b> {{relationship}} ({{years}})</p>
+        <hr>
+        {{/each}}
+         {{#each awards}}
+        <h2>Awards </h2>
+
+        <p><b>Title:</b> {{title}} ({{year}})</p>
+        <p><b>Description:</b> {{description}}</p>
+        <hr>
+        {{/each}}
+        {{#with influences}}
+        <h2>Influences </h2>
+        <li>Isaac Newton;</li>
+        <li>James Clerk Maxwell;</li>
+        <li>Hermann Minkowski;</li>
+        <hr>
+        {{/with}}
+        {{#with influenced}}
+        <h2>Influenced </h2>
+        <li>Niels Bohr;</li>
+        <li>Erwin Schrödinger;</li>
+        <li>Werner Heisenberg;</li>
+        <li>Richard Feynman.</li>
+        <hr>
+        {{/with}}
+        {{#with quotes}}
+        <h2>Quotes </h2>
+        <li>Imagination is more important than knowledge.</li>
+        <li>I have no special talent. I am only passionately curious.</li>
+        <li>The important thing is not to stop questioning.</li>
+        <li>The most beautiful thing we can experience is the mysterious. It is the source of all true art and all science.</li>
+        <hr>
+        {{/with}}
+        {{#each major_discoveries}}
+        <h2>Major discoveries </h2>
+
+        <p><b>Title:</b> {{title}} ({{year}})</p>
+        <p><b>Description:</b> {{description}}</p>
+        <hr>
+        {{/each}}
+        {{#with contributions}}
+        <h2>Contributions</h2>
+
+        <p><b>Title:</b> {{title}} ({{year}})</p>
+        <p><b>Description:</b> {{description}}</p>
+        <p><b>Field:</b> {{field}}</p>
+        <hr>
+        {{/with}}
+
+
+
+
+
+
+
+        
+
+
+</div>
