@@ -1,0 +1,97 @@
+<div>
+   {{#with person}}
+    <div>
+        <h1>{{name}}</h1>
+        <p>Age: {{age}}</p>
+        <p>Gender: {{gender}}</p>
+
+        {{#with address}}
+        <p>Address: {{street}},{{city}},{{state}},{{zip}},{{country}}</p>
+        {{/with}}
+    </div>
+        <hr>
+
+        {{#each education}}
+        <h1>Education</h1>
+        <p>Degree: {{degree}}</p>
+        <p>Major: {{major}}</p>
+        <p>University: {{university}} ({{graduationYear}})</p>
+        {{/each}}
+        <hr>
+
+        {{#each workExperience}}
+        <h1>Work Experience</h1>
+        <p>Company: {{company}}</p>
+        <p>Title: {{title}}</p>
+        <p>({{startDate}} - {{endDate}})</p>
+        <p>{{responsibilities}}</p>
+        <p>Year founded: {{year_founded}}</p>
+        <p>Industry: {{industry}}</p>
+
+        <hr>
+
+       {{#each employees}}
+        <h2>Employees</h2>
+
+        <p>Name: {{name}}</p>
+        <p>Position: {{position}}</p>
+        <p>epartment: {{department}}</p>
+
+        <hr>
+
+        {{#each projects}}
+        <h2>Projects</h2>
+
+        <p>Name: {{name}}</p>
+        <p>{{description}}</p>
+        <p>Status: {{status}}</p>
+
+        <hr>
+
+       {{#each teams}}
+        <h1>Teams</h1>
+        <p>Name: {{team_name}}</p>
+       {{#with team_leader}}
+        <h1>Team Leader</h1>
+        <p>Name: {{name}}</p>
+        <p>Title: {{title}}</p>
+        <p>Email: {{> link text=email href=url blank=true noLine=true}}</p>
+      {{/with}}
+        <hr>
+
+        {{#each team_members}}
+        <h2>Team members</h2>
+
+        <p>Name: {{name}}</p>
+        <p>Title: {{title}}</p>
+        <p>Email: {{> link text=email href=url blank=true noLine=true}}</p>
+        <p>Skills: {{skills}}</p>
+
+       <hr>
+
+       {{#each projects}}
+        <h2>Projects</h2>
+
+        <p>Name: {{name}}</p>
+        <p>Description: {{description}}</p>
+        <p>Technologies: {{technologies}}</p>
+        <hr>
+       
+       {{#each team_members}}
+        <h2>Team members</h2>
+
+        <p>Name: {{name}}</p>
+        <p>Title: {{title}}</p>
+        <hr>
+       {{/each}}
+       {{/each}}
+       {{/each}}
+       {{/each}}
+       {{/each}}
+       {{/each}}
+       {{/each}}
+       {{/with}}
+
+
+
+</div>
