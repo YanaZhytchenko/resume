@@ -1,0 +1,243 @@
+<main>
+
+      
+          {{#with navigation}}
+          <section>
+          <div class="row col-10">
+
+            {{#each links}}
+            <div class="col-2">
+            <a href="{{href}}" class="btn btn-link">{{text}}</a>
+            </div>
+            {{/each}}
+
+            <div class="col-2">
+           <a class="btn btn-primary" href="{{button.href}}">{{button.text}}</a>
+            </div>
+          
+             </div>
+             </section>
+          {{/with}} 
+       
+
+        <hr>
+        <section>
+        {{#with header}}
+            <div><h1>{{title}}</h1></div>  
+            <div><p>{{description}}</p></div>  
+          {{#with button}}
+            <a href="{{href}}" class="btn btn-primary">{{text}}</a>
+          {{/with}}
+        {{/with}}
+        </section>
+
+
+        <hr>
+          
+          {{#with city}}
+          <section>
+            <h2>{{title}}</h2>
+            <div class="row col-10">
+            {{#each cards}}
+            <div class="col-6 g-5">
+              <div class="card">
+
+               <img src="{{picture.src}}" alt="{{picture.alt}}">
+
+              <div class="card-body">
+              <h3>{{title}}</h3>
+              <p>{{description}}</p>
+
+              <a class="btn btn-primary" href="{{button.href}}">{{button.text}}</a>
+
+              </div>
+              </div>
+            </div>
+            {{/each}}
+            </div>
+            </section>
+          {{/with}}
+        
+
+        <hr>
+
+        {{#with winner}}
+        <section>
+        <h2>{{title}}</h2>
+        <div class="row col-12">
+          {{#with table}}
+            <div class="col-12"> 
+              <table class="table">
+            {{#each head}}
+                  <th>
+                    {{this}}
+                  </th>
+            {{/each}}
+
+            {{#each user}}
+           
+            <tbody>
+              <tr>
+                <th>{{place}}</th>
+                <td>{{name}}</td>
+                <td>{{surname}}</td>
+                <td>{{nickname}}</td>
+              </tr>
+            </tbody>
+            
+            {{/each}}
+            </table>
+            </section>
+
+          {{/with}}
+          </div>
+          </section>
+        {{/with}}
+
+        <hr>
+         
+
+            {{#with gallery}}
+               <section>
+                  <h2>{{title}}</h2>
+                  <div class="row col-12">
+                  {{#each cards}}
+                   <div class="col-4">
+                  <div class="card">
+                    <p class="card-header">{{name}}</p> 
+                        <ul>
+                      {{#each items}}
+                       <li>
+                        {{this}}
+                       </li>
+                      {{/each}}
+                        </ul>
+                       
+                    </div>
+                    </div> 
+                  {{/each}}
+                </div>
+                </div>
+               </section>
+            {{/with}}
+         
+       
+
+        <hr>
+            
+            {{#with relaxion}}
+            <section>
+                 <h2>{{title}}</h2>
+                 <div class="row col-10">
+                {{#each cards}}
+                 <div class="col-5 g-3">
+                <div class="card">
+                <div class="card text-bg-secondary" >
+                  <div class="card-header">{{header}}</div>
+                  <div class="card-body">
+                    <h6 class="card-title">{{title}}</h6>
+                    <p>{{description}}</p>
+                
+                </div>
+               </div>
+                </div>
+                </div>
+              {{/each}}
+              </div>
+              </section>
+              {{/with}}
+          
+            
+        <hr> 
+         
+        
+        {{#with rest}} 
+        <section>
+          <div class="row col-12">
+          {{#each cards}}
+          <div class="col-6 g-3">
+            <div class="card" >
+                  <div class="card-header text-center">{{header}}</div>
+                  <div class="card-body text-center">
+                    <h6 class="card-title">{{title}}</h6>
+                    <p>{{description}}</p>
+                    <button class="btn btn-primary btn-center">{{button}}</button>
+                
+                  </div>
+                <div class="card-footer text-center">{{footer}}</div>
+            </div>
+            </div>
+          {{/each}}
+          </div>
+          </section>  
+        {{/with}}
+        
+
+        <hr>
+         
+        
+        {{#with proposition}} 
+        <section>
+        <h2>{{title}}</h2>  
+        <div class="row col-10">
+          {{#each card}}
+          <div class="col-5 g-3">
+            <div class="card text-bg-warning" >
+               <div class="card-header">{{header}}</div>
+                <div class="card-body">
+                  <h6 class="card-title">{{title}}</h6>
+                  <p>{{description}}</p>
+                </div>
+            </div>
+            </div>
+          {{/each}}
+          </div>
+          </section>
+        {{/with}}
+        
+
+        <hr> 
+         
+       
+      {{#with footer}} 
+          <h5>{{title}}</h5>
+
+          <div class="row">
+          <div class="col-3">
+          {{#each navigation}}
+            <div>
+              <a class="btn btn-link text-link" href="{{href}}">{{text}}</a>
+            </div>
+          {{/each}}
+          </div>
+ 
+
+            <div class="col-3">
+          {{#each socialMedia}}
+          <div>
+          <a class="btn btn-outline-dark text-dark" href="{{link}}">{{name}}</a>
+           </div>
+          {{/each}}
+           </div>
+
+
+
+            <div class="col-3">
+          {{#each partners}}
+           <div>
+           <a class="btn btn-outline-info" href="{{link}}">{{name}}</a>
+           </div>
+          {{/each}}
+  
+          </div>
+          </div>
+ 
+        {{/with}}
+        
+      
+
+
+
+      </div>
+    
+</main>
