@@ -954,6 +954,60 @@ router.get('/task22', function (req, res) {
 
 // ================================================================
 
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('//', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('index8', {
+
+    layout: 'index8',
+    page: {
+      title: '/',
+    },
+    
+
+    navigation: {
+      links: [
+        {
+          text: 'Skills',
+          href: 'http://localhost:3000/skills',
+        },
+        {
+          text: 'Summary',
+          href: 'http://localhost:3000/summary',
+        },
+        {
+          text: 'Education',
+          href: 'http://localhost:3000/education',
+        },
+        {
+          text: 'Work',
+          href: 'http://localhost:3000/work',
+        },
+        {
+          text: 'Person',
+          href: 'http://localhost:3000/person',
+        },
+        {
+          text: 'Task21',
+          href: 'http://localhost:3000/task21',
+        },
+        {
+          text: 'Task22',
+          href: 'http://localhost:3000/task22',
+        },
+      ],
+    },
+
+    page_header: {
+      title: 'Житченко Яна',
+      description: 'Welcome to our wonderful community',
+    },
+   
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 
 // Підключаємо роутер до бек-енду
 module.exports = router

@@ -1,0 +1,31 @@
+<div>
+
+
+
+
+
+
+
+
+<h2>Cписок сторінок</h2>
+
+<p>Цей проект надасть Вам змогу детально ознайомитися з інформацією щодо навичок якими я володію.</p>
+
+
+ {{#with navigation}}
+    <section>
+    <div class="row col-3">
+      {{#each links}}
+      <div class="btn btn-outline-primary m-2">
+      <a href="{{href}}" class="btn-link">{{text}}</a>
+      </div> 
+      {{/each}}
+      </div>
+      </section>
+  {{/with}} 
+
+
+
+
+
+</div>
