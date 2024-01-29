@@ -1000,11 +1000,7 @@ router.get('//', function (req, res) {
       ],
     },
 
-    page_header: {
-      title: 'Житченко Яна',
-      description: 'Welcome to our wonderful community',
-    },
-   
+    
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
